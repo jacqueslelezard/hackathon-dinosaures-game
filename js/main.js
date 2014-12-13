@@ -5,8 +5,8 @@ var Menu = {
     this.display();
   },
   display: function () {
-  	for(var dino in settings){
-  		$('section .menu').append("<section class='menu-dino'>"+settings[dino]['name']+"</section>");
+  	for(var dino in settings["dinosaures"]){
+  		$('section .menu').append("<section class='menu-dino'>"+settings["dinosaures"][dino]['name']+"</section>");
   	}
   }
 }

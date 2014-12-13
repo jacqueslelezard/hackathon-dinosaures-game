@@ -22,6 +22,8 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: Arial;
+  color: #666;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -68,14 +70,16 @@ section .menu{
   top:0;
   left: 0;
   width: 1024px;
-  height: 100px;
+  height: 120px;
   background-color: rgba(100,100,100,0.5);
 }
 
 .menu-dino{
-  width: 200px;
-  height: 200px;
-  background-color: #aaa;
+  box-sizing: border-box;
+  width: 120px;
+  height: 90px;
+  background-color: #eee;
   float: left;
-  padding: 5%;
+  padding: 10px;
+  margin: 5px;
 }
