@@ -38,6 +38,9 @@ var Menu = {
       $(".feedback").fadeOut(200);
       $(".menu").slideDown(300);
     });
+    $(".end").on('click', function(){
+      $(".end").fadeOut(200);
+    });
   }
 }
 
@@ -48,18 +51,28 @@ var Scene = {
   end: function() {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
-      alert('WIN');
+      //alert('WIN');
       //changement de niveau
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
+      $('.end').fadeIn(300);
       //repositionnement dino
       Transition.reset();
       //reset menu
-      $('section .menu').html();
+      $('section .menu').html("");
       Menu.init();
 
     } else {
-      alert('LOSE');
+      //alert('LOSE');
+      //changement de niveau
+      currentLevel=currentLevel;
+      $('.feedback').fadeIn(300);
+      //repositionnement dino
+      $('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
+      //reset menu
+      $('section .menu').html("");
+      Menu.init();
+      $('.end').fadeIn(300);
     }
   }
 }
@@ -84,4 +97,5 @@ var Transition = {
 $(function(){
   Menu.init();
   $(".menu").hide();
+  $(".end").hide();
 });

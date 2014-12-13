@@ -12,6 +12,11 @@ settings.dinosaures= [
   //niveaux: [2,3] ,
 },
 {
+  id: "allo",
+  name: "Allosaure",
+  //niveaux: [1,2,3 ] ,
+},
+{
   id: "diplo",
   name: "Diplodocus",
   //niveaux: [1,2,3 ] ,
@@ -41,19 +46,19 @@ settings.levels = [
 		name:"Trias",
 		background:"",
 		foreground:"",
-		dinosaures: [0, 2],
-		dinosauresMove: ['stay', 'fly'],
+		dinosaures: [0, 2, 1],
+		dinosauresMove: ['fly', 'fly'],
 		winners: [2],
-		help: "et tente de parcourir les plaines du Trias."
+		help: "et tente d'arriver sur l'autre rive de la mer du Trias."
 	},
 	{
 		id: 2,
 		name:"Jurassique",
 		background:"",
 		foreground:"",
-		dinosaures: [1, 2],
+		dinosaures: [2, 3, 4],
 		dinosauresMove: ['fly', 'fly'],
-		winners: [2],
+		winners: [2, 4],
 		help: "et tente de traverser la forêt du Jurassique."
 	},
 	{
@@ -61,17 +66,17 @@ settings.levels = [
 		name:"Crétacé Inférieur",
 		background:"",
 		foreground:"",
-		dinosaures: [1, 2],
+		dinosaures: [1, 5, 1],
 		dinosauresMove: ['fly', 'fly'],
-		winners: [2],
-		help: "et tente d'arriver sur l'autre rive de la mer du Crétacé."
+		winners: [1, 5, 1],
+		help: "et tente de traverser les plaines du Crétacé."
 	},
 	{
 		id: 4,
 		name:"Crétacé Supérieur",
 		background:"",
 		foreground:"",
-		dinosaures: [1, 2],
+		dinosaures: [1, 2, 5],
 		dinosauresMove: ['fly', 'fly'],
 		winners: [2],
 		help: "et tente d'atteindre les hautes falaises."
