@@ -45,9 +45,9 @@ settings.levels = [
 		name:"Trias",
 		background:"",
 		foreground:"",
-		dinosaures: [0, 5],
+		dinosaures: [0, 4],
 		dinosauresMove: ['fly', 'fly'],
-		winners: [0, 5],
+		winners: [0, 4],
 		help: "et tente d'arriver sur l'autre rive de la mer du Trias."
 	},
 	{
