@@ -31,7 +31,7 @@ settings.animations = {
   stop:[{duration:1, x:300}],
   stopFly:[{duration:1, bezier:{type:'soft', values:[{x:200, y:-400}, {x:300, y:-300}]}}],
   swim:[],
-  stay:[],
+  stay:[{duration: .5, y:-50}, {duration: .5, y:0}, {duration: .5, y:-100}, {duration: .5, y:0}],
   sink:[]
 };
 
@@ -42,7 +42,7 @@ settings.levels = [
 		background:"",
 		foreground:"",
 		dinosaures: [0, 2],
-		dinosauresMove: ['fly', 'fly'],
+		dinosauresMove: ['stay', 'fly'],
 		winners: [2],
 		help: "et tente de parcourir les plaines du Trias."
 	},

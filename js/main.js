@@ -8,8 +8,10 @@ var Menu = {
     this.select();
   },
   display: function () {
+    var index = 0;
     for(var dino in settings.levels[currentLevel].dinosaures){
-      $('section .menu').append('<div class="menu-dino" id="' + settings.dinosaures[dino].id + '" data-index=' + dino + '>' + settings.dinosaures[dino].name + '</div>');
+      index = settings.levels[currentLevel].dinosaures[dino];
+      $('section .menu').append('<div class="menu-dino" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name + '</div>');
     }
     setTimeout(function(){
       $('.menu-dino').on('click', function(){
@@ -51,7 +53,7 @@ var Scene = {
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       //repositionnement dino
-      $('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
+      Transition.reset();
       //reset menu
       $('section .menu').html();
       Menu.init();
@@ -74,6 +76,8 @@ var Transition = {
   },
   reset: function() {
     this.tl.pause(0, true);
+  },
+  animateSprite: function() {
   }
 }
 
