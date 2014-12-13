@@ -51,25 +51,19 @@ var Scene = {
   end: function() {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
-      //alert('WIN');
       //changement de niveau
       $('.end').html("Bien joué a traversé l'ère du "+settings.levels[currentLevel].name+" !");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);
       //repositionnement dino
-<<<<<<< HEAD
-      //$('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
-=======
       Transition.reset();
->>>>>>> origin/master
       //reset menu
       $('section .menu').html("");
       Transition.reset();
       Menu.init();
 
     } else {
-      //alert('LOSE');
       //changement de niveau
       currentLevel=currentLevel;
       $('.feedback').fadeIn(300);
