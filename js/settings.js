@@ -32,6 +32,7 @@ settings.level = [
 		name:"Trias",
 		background:"",
 		foreground:"",
-		dinosaures: [0, 2]
+		dinosaures: [0, 2],
+		winner: [0]
 	}
 ];

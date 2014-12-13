@@ -27,7 +27,7 @@ var Menu = {
 
     //assigne le background correspondant au niveau
     $("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
-    $(".feedback").html("Niveau "+currentLevel+" : "+settings.level[currentLevel-1].name+"");
+    $(".feedback").html("Niveau "+currentLevel+" : "+settings.level[currentLevel-1].name+"<span class='check'>C'est parti !</span>");
 
     //gestion des feedback
     $(".feedback").on('click', function(){
