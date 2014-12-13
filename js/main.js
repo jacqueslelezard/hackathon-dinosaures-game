@@ -2,7 +2,6 @@ var currentDino = "aucun";
 var currentLevel = 0;
 
 var Menu = {
-  color: '#ffffff',
   init: function init() {
     this.display();
     this.select();
@@ -68,7 +67,6 @@ var Scene = {
       currentLevel=currentLevel;
       $('.feedback').fadeIn(300);
       //repositionnement dino
-      //$('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
       //reset menu
       $('section .menu').html("");
       Transition.reset();
@@ -93,8 +91,12 @@ var Transition = {
     this.tl.pause(0, true);
   },
   startSprite: function() {
+    this.interval = setInterval(function() {
+      //$(".beast img").index(0).hide();
+    }, 500);
   },
   stopSprite: function() {
+    clearInterval(this.interval);
   }
 }
 
