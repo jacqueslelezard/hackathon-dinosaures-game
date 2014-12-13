@@ -1,29 +1,38 @@
-var settings={}
+var settings={};
 
 settings.dinosaures= [
-	{
-	            id: "stego",
-	            name: "Stégosaure",
-	            niveaux: [1,2] ,
-	},
-	{
-	            id: "velo",
-	            name: "Vélociraptor",
-	            niveaux: [2,3] ,
-	},
-	{
-	            id: "diplo",
-	            name: "Diplodocus",
-	            niveaux: [1,2,3 ] ,
-	},
-],
+{
+  id: "stego",
+  name: "Stégosaure",
+  niveaux: [1,2] ,
+},
+{
+  id: "velo",
+  name: "Vélociraptor",
+  niveaux: [2,3] ,
+},
+{
+  id: "diplo",
+  name: "Diplodocus",
+  niveaux: [1,2,3 ] ,
+}
+];
 
-settings.niveau=[
+settings.animations = {
+  fly:[{x:100, y:-100}, {x:500}, {x:600, y:0}],
+  fall:[],
+  stop:[],
+  stopFly:[],
+  swim:[],
+  stay:[]
+};
+
+settings.niveau = [
 	{
 		id: 1,
 		background:"",
 		foreground:"",
 		dinosaures: ["stego", "diplo"]
 	}
-]
+];
 
