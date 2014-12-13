@@ -52,3 +52,20 @@ table {
   height:768px;
   background:#eeeeee;
 }
+
+section .menu{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 1024px;
+  height: 100px;
+  background-color: rgba(100,100,100,0.5);
+}
+
+.menu-dino{
+  width: 200px;
+  height: 200px;
+  background-color: #aaa;
+  float: left;
+  padding: 5%;
+}

@@ -1,4 +1,6 @@
-var dinosaures = [
+var settings={}
+
+settings.dinosaures= [
 	{
 	            id: "stego",
 	            name: "Stégosaure",
@@ -14,9 +16,9 @@ var dinosaures = [
 	            name: "Diplodocus",
 	            niveaux: [1,2,3 ] ,
 	},
-]
+],
 
-var niveau=[
+settings.niveau=[
 	{
 		id: 1,
 		background:"",
@@ -24,3 +26,4 @@ var niveau=[
 		dinosaures: ["stego", "diplo"]
 	}
 ]
+
