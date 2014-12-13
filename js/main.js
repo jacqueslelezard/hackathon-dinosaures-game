@@ -53,13 +53,19 @@ var Scene = {
     if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
       //alert('WIN');
       //changement de niveau
+      $('.end').html("Bien joué a traversé l'ère du "+settings.levels[currentLevel].name+" !");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);
       //repositionnement dino
+<<<<<<< HEAD
+      //$('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
+=======
       Transition.reset();
+>>>>>>> origin/master
       //reset menu
       $('section .menu').html("");
+      Transition.reset();
       Menu.init();
 
     } else {
@@ -68,10 +74,12 @@ var Scene = {
       currentLevel=currentLevel;
       $('.feedback').fadeIn(300);
       //repositionnement dino
-      $('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
+      //$('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
       //reset menu
       $('section .menu').html("");
+      Transition.reset();
       Menu.init();
+      $('.end').html("Dommage, ta monture n'était pas adaptée, retente ta chance !");
       $('.end').fadeIn(300);
     }
   }
