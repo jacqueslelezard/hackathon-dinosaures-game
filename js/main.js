@@ -20,15 +20,24 @@ var Menu = {
   	}, 0);
   }
 }
+//génération des dinosaures disponibles dans le menu
+$(function(){
+  Menu.init();
+  $(".menu").hide();
+})
 
+//sélection du dinosaure
 $("section .menu").click(function(){
 	console.log(currentDino);
 	$("section .menu").hide(300);
 })
 
+//assigne le background correspondant au niveau
 $("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
+$(".feedback").html("Niveau "+currentLevel+" : "+settings.niveau[currentLevel-1].name+"");
 
-
-$(function(){
-  Menu.init();
-})
+//gestion des feedback
+$(".feedback").on('click', function(){
+	$(".feedback").fadeOut(200);
+	$(".menu").show(300);
+});

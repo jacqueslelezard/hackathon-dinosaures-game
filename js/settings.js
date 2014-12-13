@@ -21,6 +21,7 @@ settings.dinosaures= [
 settings.niveau=[
 	{
 		id: 1,
+		name:"Trias",
 		background:"",
 		foreground:"",
 		dinosaures: ["stego", "diplo"]
