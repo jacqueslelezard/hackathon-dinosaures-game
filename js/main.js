@@ -41,8 +41,7 @@ var Menu = {
 
 var Scene = {
   play: function () {
-    console.log(settings.levels[currentLevel]);
-    animate(settings.levels[currentLevel].dinosauresMove[currentDino], this.end);
+    Transition.animate(settings.levels[currentLevel].dinosauresMove[currentDino], this.end);
   },
   end: function() {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
@@ -54,12 +53,18 @@ var Scene = {
   }
 }
 
-function animate(type, cb) {
-  var animation = settings.animations[type];
-  if(! animation) return;
-  var tl = new TimelineMax({repeat:0, onComplete:cb, delay:1});
-  for(var step in animation) {
-    tl.add(new TweenMax(".beast", animation[step].duration || 1, $.extend(animation[step], {ease:animation[step].ease || Linear.easeNone})));
+var Transition = {
+  tl: null,
+  animate: function (type, cb) {
+    var animation = settings.animations[type];
+    if(! animation) return;
+    this.tl = new TimelineMax({repeat:0, onComplete:cb, delay:1});
+    for(var step in animation) {
+      this.tl.add(new TweenMax(".beast", animation[step].duration || 1, $.extend(animation[step], {ease:animation[step].ease || Linear.easeNone})));
+    }
+  },
+  reset: function() {
+    this.tl.pause(0, true);
   }
 }
 

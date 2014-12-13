@@ -20,9 +20,10 @@ settings.dinosaures= [
 settings.animations = {
   //fly:[{x:100, y:-100}, {x:500}, {x:600, y:0}],
   fly:[{duration:2, bezier:{type:'soft', values:[{x:300, y:-300}, {x:724, y:0}]}}],
-  fall:[],
-  stop:[],
-  stopFly:[],
+  fall:[{duration:1, bezier:{type:'soft', values:[{x:100, y:-100}, {x:200, y:200}]}}],
+  walk:[{duration:2, x:724}],
+  stop:[{duration:1, x:300}],
+  stopFly:[{duration:1, bezier:{type:'soft', values:[{x:200, y:-400}, {x:300, y:-300}]}}],
   swim:[],
   stay:[],
   sink:[]
@@ -35,7 +36,7 @@ settings.levels = [
 		background:"",
 		foreground:"",
 		dinosaures: [0, 2],
-		dinosauresMove: ['fly', 'fly'],
+		dinosauresMove: ['stopFly', 'fly'],
 		winners: [0]
 	}
 ];
