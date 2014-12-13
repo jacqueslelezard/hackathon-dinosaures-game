@@ -14,7 +14,7 @@ var Menu = {
     setTimeout(function(){
       $('.menu-dino').on('click', function(){
         currentDino = $(this).data('index');
-        $('.beast').html("<img src='img/"+$(this).attr('id')+".png'/>");
+        $('.beast').html("<img src='img/"+$(this).attr('id')+"LL.png'/>");
       });
     }, 0);
   },
@@ -29,7 +29,7 @@ var Menu = {
     $("#container").css("background-image", "url('img/niveau" + (currentLevel + 1) + "bg.png')");
     $("#foreground").attr("src", "img/niveau"+currentLevel+"fg.png");
     $(".feedback").html("Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
-                        "<div class='help'>Choisis ta monture pour tenter de traverser les plaines du Trias.</div>"+
+                        "<div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
                         "<span class='check'>C'est parti !</span>");
     //gestion des feedback
     $(".feedback").on('click', function(){
@@ -47,6 +47,15 @@ var Scene = {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
       alert('WIN');
+      //changement de niveau
+      currentLevel=currentLevel+1;
+      $('.feedback').fadeIn(300);
+      //repositionnement dino
+      $('.beast').css('transform', 'matrix(1, 0, 0, 1, 4, 0)');
+      //reset menu
+      $('section .menu').html();
+      Menu.init();
+
     } else {
       alert('LOSE');
     }
