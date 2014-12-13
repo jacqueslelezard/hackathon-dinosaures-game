@@ -1,5 +1,5 @@
 var currentDino="aucun";
-var currentLevel=0;
+var currentLevel=1;
 
 
 var Menu = {
@@ -25,6 +25,9 @@ $("section .menu").click(function(){
 	console.log(currentDino);
 	$("section .menu").hide(300);
 })
+
+$("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
+
 
 $(function(){
   Menu.init();
