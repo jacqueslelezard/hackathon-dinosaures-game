@@ -26,9 +26,9 @@ var Menu = {
     })
 
     //assigne le background correspondant au niveau
-    $("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
+    $("#container").css("background-image", "url('img/niveau" + (currentLevel + 1) + "bg.png')");
     $("#foreground").attr("src", "img/niveau"+currentLevel+"fg.png");
-    $(".feedback").html("Epoque "+currentLevel+" : le "+settings.level[currentLevel-1].name+
+    $(".feedback").html("Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
                         "<div class='help'>Choisis ta monture pour tenter de traverser les plaines du Trias.</div>"+
                         "<span class='check'>C'est parti !</span>");
     //gestion des feedback
@@ -48,6 +48,8 @@ var Scene = {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
       alert('WIN');
+    } else {
+      alert('LOSE');
     }
   }
 }
