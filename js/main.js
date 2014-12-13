@@ -51,7 +51,7 @@ function animate(type, cb) {
   if(! animation) return;
   var tl = new TimelineMax({repeat:0, onComplete:cb, delay:1});
   for(var step in animation) {
-    tl.add(new TweenMax(".beast", 1, $.extend(animation[step], {ease:Linear.easeNone})));
+    tl.add(new TweenMax(".beast", animation[step].duration || 1, $.extend(animation[step], {ease:animation[step].ease || Linear.easeNone})));
   }
 }
 

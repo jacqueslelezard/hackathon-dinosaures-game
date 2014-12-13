@@ -58,11 +58,10 @@ table {
 
 #container .beast{
   position:absolute;
-  bottom:50px;
+  bottom:200px;
   left:50px;
   width:200px;
   height:200px;
-  background-color:rgba(0,100,0,0.3);
 }
 
 section .menu{
