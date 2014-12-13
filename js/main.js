@@ -8,8 +8,8 @@ var Menu = {
     this.select();
   },
   display: function () {
-  	for(var dino in settings["dinosaures"]){
-  		$('section .menu').append('<div class="menu-dino" id=' + settings.dinosaures[dino].id + '>' + settings.dinosaures[dino].name + '</div>');//.append("<section class='menu-dino' onclick='currentDino="+settings['dinosaures'][dino]['id']+"'>"+settings['dinosaures'][dino]['name']+"</section>");
+  	for(var dino in settings.level[currentLevel-1].dinosaures){
+  			$('section .menu').append('<div class="menu-dino" id=' + settings.dinosaures[dino].id + '>' + settings.dinosaures[dino].name + '</div>');//.append("<section class='menu-dino' onclick='currentDino="+settings['dinosaures'][dino]['id']+"'>"+settings['dinosaures'][dino]['name']+"</section>");
   	}
   	setTimeout(function(){
   		$('.menu-dino').on('click', function(){
@@ -23,17 +23,17 @@ var Menu = {
     $("section .menu").click(function(){
       console.log(currentDino);
       Scene.play();
-      $("section .menu").hide(300);
+      $("section .menu").slideUp(300);
     })
 
     //assigne le background correspondant au niveau
     $("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
-    $(".feedback").html("Niveau "+currentLevel+" : "+settings.niveau[currentLevel-1].name+"");
+    $(".feedback").html("Niveau "+currentLevel+" : "+settings.level[currentLevel-1].name+"<span class='check'>C'est parti !</span>");
 
     //gestion des feedback
     $(".feedback").on('click', function(){
       $(".feedback").fadeOut(200);
-      $(".menu").show(300);
+      $(".menu").slideDown(300);
     });
   }
 }

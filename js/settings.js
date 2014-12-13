@@ -4,17 +4,17 @@ settings.dinosaures= [
 {
   id: "ptero",
   name: "Ptérosaure",
-  niveaux: [1,2] ,
+  //niveaux: [1,2] ,
 },
 {
   id: "velo",
   name: "Vélociraptor",
-  niveaux: [2,3] ,
+  //niveaux: [2,3] ,
 },
 {
   id: "diplo",
   name: "Diplodocus",
-  niveaux: [1,2,3 ] ,
+  //niveaux: [1,2,3 ] ,
 }];
 
 settings.animations = {
@@ -26,12 +26,13 @@ settings.animations = {
   stay:[]
 };
 
-settings.niveau = [
+settings.level = [
 	{
 		id: 1,
 		name:"Trias",
 		background:"",
 		foreground:"",
-		dinosaures: ["stego", "diplo"]
+		dinosaures: [0, 2],
+		winner: [0]
 	}
 ];
