@@ -29,15 +29,14 @@ settings.dinosaures= [
 ];
 
 settings.animations = {
-  //fly:[{x:100, y:-100}, {x:500}, {x:600, y:0}],
   fly:[{duration:2, bezier:{type:'soft', values:[{x:300, y:-300}, {x:724, y:0}]}}],
   fall:[{duration:1, bezier:{type:'soft', values:[{x:100, y:-100}, {x:200, y:200}]}}],
   walk:[{duration:2, x:724}],
   stop:[{duration:1, x:300}],
   stopFly:[{duration:1, bezier:{type:'soft', values:[{x:200, y:-400}, {x:300, y:-300}]}}],
-  swim:[],
+  swim:[{x:100, y:50}, {x:600}, {x:724, y:0}],
   stay:[{duration: .5, y:-50}, {duration: .5, y:0}, {duration: .5, y:-100}, {duration: .5, y:0}],
-  sink:[]
+  sink:this.fly
 };
 
 settings.levels = [

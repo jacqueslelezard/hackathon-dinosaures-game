@@ -90,7 +90,9 @@ var Transition = {
   reset: function() {
     this.tl.pause(0, true);
   },
-  animateSprite: function() {
+  startSprite: function() {
+  },
+  stopSprite: function() {
   }
 }
 
