@@ -22,8 +22,8 @@ var dinosaures = [
 var niveau=[
 	{
 		id: 1,
-		background:"",
-		foreground:"",
+		background:"img/niveau1bg.png",
+		foreground:"img/niveau1fg.png",
 		dinosaures: ["stego", "diplo"]
 	}
 ]
