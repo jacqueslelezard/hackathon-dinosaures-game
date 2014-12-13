@@ -22,6 +22,7 @@ var Menu = {
     //sélection du dinosaure
     $("section .menu").click(function(){
       console.log(currentDino);
+      Scene.play();
       $("section .menu").hide(300);
     })
 
@@ -39,19 +40,18 @@ var Menu = {
 
 var Scene = {
   init: function init() {
-    this.play();
   },
   play: function move() {
     animate('fly');
   }
 }
 
-function animate(type) {
+function animate(type, cb) {
   var animation = settings.animations[type];
   if(! animation) return;
-  var tl = new TimelineMax({repeat:0, onUpdate:function(){}, delay:1});
-  for(var step in animation) { 
-    tl.add(new TweenMax(".beast", 1, animation[step]));
+  var tl = new TimelineMax({repeat:0, onComplete:cb, delay:1});
+  for(var step in animation) {
+    tl.add(new TweenMax(".beast", 1, $.extend(animation[step], {ease:Linear.easeNone})));
   }
 }
 
