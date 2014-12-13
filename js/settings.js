@@ -2,8 +2,8 @@ var settings={}
 
 settings.dinosaures= [
 	{
-	            id: "stego",
-	            name: "Stégosaure",
+	            id: "ptero",
+	            name: "Ptérosaure",
 	            niveaux: [1,2] ,
 	},
 	{

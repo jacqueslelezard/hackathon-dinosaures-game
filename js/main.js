@@ -15,6 +15,7 @@ var Menu = {
   	setTimeout(function(){
   		$('.menu-dino').on('click', function(){
   			currentDino = $(this).attr('id');
+  			$('.beast').append("<img src='img/"+$(this).attr('id')+".png'/>");
   		});
   	}, 0);
   }
