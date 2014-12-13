@@ -14,7 +14,7 @@ var Menu = {
   	setTimeout(function(){
   		$('.menu-dino').on('click', function(){
   			currentDino = $(this).attr('id');
-  			$('.beast').append("<img src='img/"+$(this).attr('id')+".png'/>");
+  			$('.beast').html("<img src='img/"+$(this).attr('id')+".png'/>");
   		});
   	}, 0);
   },
@@ -28,7 +28,10 @@ var Menu = {
 
     //assigne le background correspondant au niveau
     $("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
-    $(".feedback").html("Niveau "+currentLevel+" : "+settings.level[currentLevel-1].name+"<span class='check'>C'est parti !</span>");
+    $("#foreground").attr("src", "img/niveau"+currentLevel+"fg.png");
+    $(".feedback").html("Epoque "+currentLevel+" : le "+settings.level[currentLevel-1].name+
+    	"<div class='help'>Choisis ta monture pour tenter de traverser les plaines du Trias.</div>"+
+    	"<span class='check'>C'est parti !</span>");
 
     //gestion des feedback
     $(".feedback").on('click', function(){
