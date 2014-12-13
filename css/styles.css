@@ -3,12 +3,12 @@
  *       License: none (public domain)
  *       */
 
-
+/*
 @font-face {
 font-family: 'FredokaOne';
 src: url('font/FredokaOne-Regular.ttf');
 font-weight: normal;
-}
+}*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -29,7 +29,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: 'FredokaOne', Arial;
+  font-family: 'Fredoka One', Arial;
   color: #666;
 }
 /* HTML5 display-role reset for older browsers */
@@ -94,7 +94,6 @@ section .menu{
   color: #fff;
   border: 5px solid rgba(255,255,255,0.7);
   font-size: 24px;
-  font-weight: bold;
 }
 
 .feedback{
