@@ -24,16 +24,18 @@ settings.animations = {
   stop:[],
   stopFly:[],
   swim:[],
-  stay:[]
+  stay:[],
+  sink:[]
 };
 
-settings.level = [
+settings.levels = [
 	{
 		id: 1,
 		name:"Trias",
 		background:"",
 		foreground:"",
 		dinosaures: [0, 2],
-		winner: [0]
+		dinosauresMove: ['fly', 'fly'],
+		winners: [0]
 	}
 ];

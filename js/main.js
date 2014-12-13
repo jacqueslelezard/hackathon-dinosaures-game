@@ -1,5 +1,5 @@
-var currentDino="aucun";
-var currentLevel=1;
+var currentDino = "aucun";
+var currentLevel = 0;
 
 var Menu = {
   color: '#ffffff',
@@ -8,27 +8,26 @@ var Menu = {
     this.select();
   },
   display: function () {
-  	for(var dino in settings.level[currentLevel-1].dinosaures){
-  			$('section .menu').append('<div class="menu-dino" id=' + settings.dinosaures[dino].id + '>' + settings.dinosaures[dino].name + '</div>');//.append("<section class='menu-dino' onclick='currentDino="+settings['dinosaures'][dino]['id']+"'>"+settings['dinosaures'][dino]['name']+"</section>");
-  	}
-  	setTimeout(function(){
-  		$('.menu-dino').on('click', function(){
-  			currentDino = $(this).attr('id');
-  			$('.beast').append("<img src='img/"+$(this).attr('id')+".png'/>");
-  		});
-  	}, 0);
+    for(var dino in settings.levels[currentLevel].dinosaures){
+      $('section .menu').append('<div class="menu-dino" id="' + settings.dinosaures[dino].id + '" data-index=' + dino + '>' + settings.dinosaures[dino].name + '</div>');
+    }
+    setTimeout(function(){
+      $('.menu-dino').on('click', function(){
+        currentDino = $(this).data('index');
+        $('.beast').append("<img src='img/"+$(this).attr('id')+".png'/>");
+      });
+    }, 0);
   },
   select: function() {
     //sélection du dinosaure
     $("section .menu").click(function(){
-      console.log(currentDino);
       Scene.play();
       $("section .menu").slideUp(300);
     })
 
     //assigne le background correspondant au niveau
-    $("#container").css("background-image", "url('img/niveau"+currentLevel+"bg.png')");
-    $(".feedback").html("Niveau "+currentLevel+" : "+settings.level[currentLevel-1].name+"<span class='check'>C'est parti !</span>");
+    $("#container").css("background-image", "url('img/niveau" + (currentLevel+1) + "bg.png')");
+    $(".feedback").html("Niveau " + (currentLevel + 1) + " : "+settings.levels[currentLevel].name+"<span class='check'>C'est parti !</span>");
 
     //gestion des feedback
     $(".feedback").on('click', function(){
@@ -39,10 +38,15 @@ var Menu = {
 }
 
 var Scene = {
-  init: function init() {
+  play: function () {
+    console.log(settings.levels[currentLevel]);
+    animate(settings.levels[currentLevel].dinosauresMove[currentDino], this.end);
   },
-  play: function move() {
-    animate('fly');
+  end: function() {
+    var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
+    if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
+      alert('WIN');
+    }
   }
 }
 
@@ -57,6 +61,5 @@ function animate(type, cb) {
 
 $(function(){
   Menu.init();
-  Scene.init();
   $(".menu").hide();
 });
