@@ -1,4 +1,5 @@
-var currentDino = "aucun";
+var currentDino = 0; 
+var indexDino = 0;
 var currentLevel = 0;
 
 var Menu = {
@@ -11,11 +12,12 @@ var Menu = {
 
     for(var dino in settings.levels[currentLevel].dinosaures){
       index = settings.levels[currentLevel].dinosaures[dino];
-      $('section .menu').append('<div class="menu-dino" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name + '</div>');
+      $('section .menu').append('<div class="menu-dino" data-index-dino="' + dino + '" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name + '</div>');
     }
     setTimeout(function(){
       $('.menu-dino').on('click', function(){
         currentDino = $(this).data('index');
+        indexDino = $(this).data('index-dino'); 
         $('.beast').html("<img src='img/"+$(this).attr('id')+"LL.png'/><img src='img/"+$(this).attr('id')+"LL2.png'/>");
       });
     }, 0);
@@ -31,8 +33,8 @@ var Menu = {
     $("#container").css("background-image", "url('img/niveau" + (currentLevel + 1) + "bg.png')");
     $("body").attr("id", ("niveau"+(currentLevel+1)));
     $("#foreground img").attr("src", "img/niveau"+(currentLevel+1)+"fg.png");
-    $(".feedback").html("Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
-                        "<div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
+    $(".feedback").html("<span class='epoque'>Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
+                        "</span><div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
                         "<span class='check'>C'est parti !</span>");
     //gestion des feedback
     $(".feedback").on('click', function(){
@@ -53,8 +55,8 @@ var Scene = {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
       //changement de niveau
-      $('.end').html("Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !");
-      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+"LL.png'/><span class='check'>Continuer !</span></div>");
+      $('.end').html("<span class='epoque'>Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
+      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer !</span> <span class='retour'><a href='http://htmlpreview.github.io/?https://github.com/vripoche/hackathon-dinosaures-game/blob/master/index.html'>Retour au livre !</span></div>");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);
@@ -86,6 +88,7 @@ var Transition = {
   cb: function(){},
   animate: function (type, cb) {
     var animation = settings.animations[type];
+    var duration = 0;
     if(! animation) return;
     this.cb = cb;
     this.tl = new TimelineMax({repeat:0, onComplete:$.proxy(this.afterAnimate, this), delay:1});
@@ -110,6 +113,11 @@ var Transition = {
   },
   stopSprite: function() {
     clearInterval(this.interval);
+  },
+  armageddon: function() {
+    $(".stone").animate({top:0}, 100, 'linear', function() {
+      $('.stone').box2d({'y-velocity':150});
+    });
   }
 }
 
