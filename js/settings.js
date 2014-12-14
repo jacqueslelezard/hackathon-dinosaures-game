@@ -41,7 +41,7 @@ settings.animations = {
   stopFly:[{duration:1, bezier:{type:'soft', values:[{x:200, y:-400}, {x:300, y:-300}]}}],
   swim:[{x:100, y:50}, {x:600}, {x:724, y:0}],
   stay:[{duration:2, bezier:{type:'soft', values:[{x:300, y:200}, {x:724, y:0}]}}],
-  sink:this.fly
+  sink:[{duration:1, bezier:{type:'soft', values:[{x:100, y:-100}, {x:200, y:200}]}}]
 };
 
 settings.levels = [
