@@ -286,3 +286,17 @@ section .menu{
   width: 1024px;
   z-index: 10;
 }
+
+
+#fin{
+  position: absolute;
+  width: 90%;
+  margin: 5%;
+  padding: 10%;
+  box-sizing: border-box;
+  background-color: rgba(200,64,0,0.9);
+  height: 80%;
+  color: #fff;
+  font-size: 60px;
+  z-index: 20;
+}

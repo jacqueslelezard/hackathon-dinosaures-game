@@ -1,6 +1,6 @@
 var currentDino = 0; 
 var indexDino = 0;
-var currentLevel = 4;
+var currentLevel = 0;
 
 var Menu = {
   init: function init() {
@@ -56,6 +56,9 @@ var Scene = {
     if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
       if(currentLevel === 4) {
         Transition.armageddon();
+        setTimeout(function(){
+            $('#fin').fadeIn(300);
+        }, 3000);
         return;
       }
       //changement de niveau
@@ -129,4 +132,5 @@ $(function(){
   Menu.init();
   $(".menu").hide();
   $(".end").hide();
+  $("#fin").hide();
 });

@@ -100,16 +100,16 @@ settings.levels = [
 		winners: [4, 9],
 		help: "et tente de traverser les mers du Jurassique.",
 		info: "Le pliosaure était le plus grand prédateur des mers !! Il mangeait des calamars, des poissons et des reptiles marins. <br/>Il mesurait de 10 à 13 mètres de long et pesait plusieurs tonnes<br/><br/>Le pliosaure a vécu de 112 à 98 millions d’années avant notre ère.",
-		infoimg: "liopleu"
+		infoimg: "plio"
 	},
 	{
 		id: 4,
 		name:"Crétacé",
 		background:"",
 		foreground:"",
-		dinosaures: [1, 4],
+		dinosaures: [1, 4, 7],
 		dinosauresMove: ['walk', 'stay'],
-		winners: [1],
+		winners: [1, 7],
 		help: "et tente de traverser les plaines du Crétacé.",
 		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
 		infoimg: "velo"
