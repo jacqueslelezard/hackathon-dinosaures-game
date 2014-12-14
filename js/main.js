@@ -28,7 +28,7 @@ var Menu = {
 
     //assigne le background correspondant au niveau
     $("#container").css("background-image", "url('img/niveau" + (currentLevel + 1) + "bg.png')");
-    $("#foreground").attr("src", "img/niveau"+currentLevel+"fg.png");
+    $("#foreground img").attr("src", "img/niveau"+(currentLevel+1)+"fg.png");
     $(".feedback").html("Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
                         "<div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
                         "<span class='check'>C'est parti !</span>");
@@ -51,7 +51,8 @@ var Scene = {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
       //changement de niveau
-      $('.end').html("Bien joué a traversé l'ère du "+settings.levels[currentLevel].name+" !");
+      $('.end').html("Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !");
+      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+"LL.png'/><span class='check'>Continuer !</span></div>");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);

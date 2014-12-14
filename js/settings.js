@@ -26,6 +26,11 @@ settings.dinosaures= [
   name: "Liopleusaure",
   //niveaux: [1,2,3 ] ,
 },
+{
+  id: "ichtyo",
+  name: "Ichtyosaure",
+  //niveaux: [1,2,3 ] ,
+},
 ];
 
 settings.animations = {
@@ -48,8 +53,12 @@ settings.levels = [
 		dinosaures: [0, 4],
 		dinosauresMove: ['fly', 'fly'],
 		winners: [0, 4],
-		help: "et tente d'arriver sur l'autre rive de la mer du Trias."
+		help: "et tente d'arriver sur l'autre rive de la mer du Trias.",
+		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		infoimg: "ichtyo"
+		//help: "L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années."
 	},
+
 	{
 		id: 2,
 		name:"Jurassique",
@@ -58,7 +67,9 @@ settings.levels = [
 		dinosaures: [2, 3, 4],
 		dinosauresMove: ['fly', 'fly'],
 		winners: [2, 4],
-		help: "et tente de traverser la forêt du Jurassique."
+		help: "et tente de traverser la forêt du Jurassique.",
+		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		infoimg: "diplo"
 	},
 	{
 		id: 3,
