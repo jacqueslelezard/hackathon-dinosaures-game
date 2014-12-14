@@ -15,7 +15,8 @@ var Menu = {
       $('section .menu').append('<div class="menu-dino" data-index-dino="' + dino + '" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name +'<img src="img/'+settings.dinosaures[index].id+'menu.png "/></div>');
     }
     setTimeout(function(){
-      $('.menu-dino').on('click', function(){
+      $('.menu-dino').on('click', function(e){
+        e.preventDefault();
         currentDino = $(this).data('index');
         indexDino = $(this).data('index-dino'); 
         $('.beast').html("<img src='img/"+$(this).attr('id')+"LL.png'/><img src='img/"+$(this).attr('id')+"LL2.png'/>");
@@ -25,6 +26,7 @@ var Menu = {
   select: function() {
     //sélection du dinosaure
     $("section .menu").click(function(){
+       e.preventDefault();
       Scene.play();
       $("section .menu").slideUp(300);
     })
@@ -38,10 +40,12 @@ var Menu = {
                         "<span class='check'>C'est parti !</span>");
     //gestion des feedback
     $(".feedback").on('click', function(){
+      e.preventDefault();
       $(".feedback").fadeOut(200);
       $(".menu").slideDown(300);
     });
     $(".end").on('click', function(){
+       e.preventDefault();
       $(".end").fadeOut(200);
     });
   }
