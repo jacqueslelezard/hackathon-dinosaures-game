@@ -83,11 +83,17 @@ body{
 #container .stone{
   position:absolute;
   z-index:5;
-  top:-300px;
+  top:-500px;
   left:400px;
-  width:300px;
-  height:300px;
+  width:500px;
+  height:500px;
   background-color:green;
+}
+#container .stone img{
+  display:block;
+  position:absolute;
+  bottom:0;
+  left:50%;
 }
 #niveau1 #container .beast{
   overflow:hidden;

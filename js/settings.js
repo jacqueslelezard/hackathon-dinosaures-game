@@ -115,8 +115,8 @@ settings.levels = [
 		background:"",
 		foreground:"",
 		dinosaures: [0, 6, 1],
-		dinosauresMove: ['fly', 'sink', 'skink'],
-		winners: [1],
+		dinosauresMove: ['stop', 'stop', 'stop'],
+		winners: [0,6,1],
 		help: ".",
 		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
 		infoimg: "velo"

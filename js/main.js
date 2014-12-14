@@ -1,6 +1,6 @@
 var currentDino = 0; 
 var indexDino = 0;
-var currentLevel = 0;
+var currentLevel = 4;
 
 var Menu = {
   init: function init() {
@@ -54,6 +54,10 @@ var Scene = {
   end: function() {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
+      if(currentLevel === 4) {
+        Transition.armageddon();
+        return;
+      }
       //changement de niveau
       $('.end').html("<span class='epoque'>Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
       $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer !</span> <span class='retour'><a href='http://htmlpreview.github.io/?https://github.com/vripoche/hackathon-dinosaures-game/blob/master/index.html'>Retour au livre !</span></div>");
@@ -115,8 +119,8 @@ var Transition = {
     clearInterval(this.interval);
   },
   armageddon: function() {
-    $(".stone").animate({top:0}, 100, 'linear', function() {
-      $('.stone').box2d({'y-velocity':150});
+    $(".stone").animate({top:-200}, 100, 'linear', function() {
+      $('.stone').box2d({'y-velocity':100});
     });
   }
 }
