@@ -62,7 +62,7 @@ var Scene = {
         return;
       }
       //changement de niveau
-      $('.end').html("<span class='epoque'>Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
+      $('.end').html("<span class='epoque'>Bien joué tu as traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
       $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer</span> <span class='retour'><a href='https://r21ea13788.racontr.com/'>Lire</span></div>");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
