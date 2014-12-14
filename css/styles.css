@@ -3,16 +3,15 @@
  *       License: none (public domain)
  *       */
 
-/*
+
 @font-face {
 font-family: 'FredokaOne';
 src: url('font/FredokaOne-Regular.ttf');
 font-weight: normal;
-}*/
+}
 @font-face {
 font-family: 'BorisBlackBloxx';
-src: url('font/BorisBlackBloxx.ttf');
-font-weight: normal;
+src: url('font/BorisBlackBloxx.otf');
 }
 
 html, body, div, span, applet, object, iframe,
@@ -64,6 +63,11 @@ body{
   width:1024px;
   height:728px;
 }
+a{
+  font-family: "BorisBlackBloxx";
+  text-decoration: none;
+  color: rgb(150,60,0);
+}
 #container{
   position:relative;
   width:1024px;
@@ -83,12 +87,13 @@ body{
 #container .stone{
   position:absolute;
   z-index:5;
-  top:-300px;
-  left:400px;
-  width:300px;
-  height:300px;
-  background-color:green;
+  top:-306px;
+  left:300px;
+  width:428px;
+  height:306px;
+  background:transparent url(../img/caillou.png) 0 0 no-repeat;
 }
+
 #niveau1 #container .beast{
   overflow:hidden;
   position:absolute;
@@ -137,16 +142,23 @@ section .menu{
   box-sizing: border-box;
   width: 180px;
   height: 180px;
-  background-color: rgba(200,200,100,0.8);
+  background-color: rgba(255,255,255,0.8);
   float: left;
   padding: 20px;
   padding-left: 10px;
-  padding-top: 70px;
+  padding-top: 100px;
   margin: 5px;
   border-radius: 100px;
-  color: #fff;
+  color: rgb(150,60,0);
   border: 5px solid rgba(255,255,255,0.7);
   font-size: 24px;
+  box-shadow: 2px 2px 5px rgba(100,100,100,0.8);
+  font-family: "BorisBlackBloxx";
+}
+
+.menu-dino img{
+  position: relative;
+  margin-top: -100px;
 }
 
 .feedback{
@@ -174,10 +186,11 @@ section .menu{
   left: 40%;
   z-index: 40;
   color: #fff;
-  color: rgb(150,60,60);
+  color: rgb(150,60,20);
   background-color: #fff;
   box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
+  font-family: "BorisBlackBloxx";
 }
 
 .feedback .help{
@@ -203,8 +216,8 @@ section .menu{
 }
 .end img{
   width: 500px;
-  margin-top: -100px;
-  margin-left: -50px;
+  margin-top: 30px;
+  margin-left: -80px;
 }
 .end .epoque{
   font-family: "BorisBlackBloxx";
@@ -228,15 +241,16 @@ section .menu{
 
 .info .check{
   position: absolute;
-  bottom: 30%;
+  bottom: 35%;
   left: 50%;
   z-index: 40;
   color: #fff;
   font-size: 60px;
-  color: rgb(150,60,60);
+  color: rgb(150,60,0);
   background-color: #fff;
   box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
+  font-family: "BorisBlackBloxx";
 }
 .info .retour{
   position: absolute;
@@ -245,10 +259,11 @@ section .menu{
   z-index: 40;
   color: #fff;
   font-size: 60px;
-  color: rgb(150,60,60);
+  color: rgb(150,60,0);
   background-color: #fff;
   box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
+  font-family: "BorisBlackBloxx";
 }
 /*
 .info .img{
@@ -269,4 +284,18 @@ section .menu{
   left: 0;
   width: 1024px;
   z-index: 10;
+}
+
+
+#fin{
+  position: absolute;
+  width: 90%;
+  margin: 5%;
+  padding: 10%;
+  box-sizing: border-box;
+  background-color: rgba(200,64,0,0.9);
+  height: 80%;
+  color: #fff;
+  font-size: 60px;
+  z-index: 20;
 }
