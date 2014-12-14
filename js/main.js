@@ -79,6 +79,7 @@ var Scene = {
 
 var Transition = {
   tl: null,
+  interval: null,
   animate: function (type, cb) {
     var animation = settings.animations[type];
     if(! animation) return;
@@ -92,7 +93,8 @@ var Transition = {
   },
   startSprite: function() {
     this.interval = setInterval(function() {
-      //$(".beast img").index(0).hide();
+      var item =  $(".beast img").index(0);
+      item.css('display', item.css('display') === 'none' ? 'block' : 'none');
     }, 500);
   },
   stopSprite: function() {
