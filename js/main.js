@@ -12,7 +12,7 @@ var Menu = {
 
     for(var dino in settings.levels[currentLevel].dinosaures){
       index = settings.levels[currentLevel].dinosaures[dino];
-      $('section .menu').append('<div class="menu-dino" data-index-dino="' + dino + '" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name + '</div>');
+      $('section .menu').append('<div class="menu-dino" data-index-dino="' + dino + '" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name +'<img src="img/'+settings.dinosaures[index].id+'menu.png "/></div>');
     }
     setTimeout(function(){
       $('.menu-dino').on('click', function(){
