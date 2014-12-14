@@ -9,6 +9,11 @@ font-family: 'FredokaOne';
 src: url('font/FredokaOne-Regular.ttf');
 font-weight: normal;
 }*/
+@font-face {
+font-family: 'BorisBlackBloxx';
+src: url('font/BorisBlackBloxx.ttf');
+font-weight: normal;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -111,7 +116,7 @@ body{
 #niveau4 #container .beast{
   overflow:hidden;
   position:absolute;
-  bottom:200px;
+  bottom:100px;
   left:50px;
   width:300px;
   height:200px;
@@ -150,11 +155,17 @@ section .menu{
   margin: 5%;
   padding: 10%;
   box-sizing: border-box;
-  background-color: rgba(250,200,100,0.8);
+  background-color: rgba(200,64,0,0.9);
   height: 80%;
   color: #fff;
   font-size: 60px;
   z-index: 20;
+}
+
+.feedback .epoque{
+  font-family: "BorisBlackBloxx";
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(100,50,50,0.5);
 }
 
 .feedback .check{
@@ -183,7 +194,7 @@ section .menu{
   margin: 0;
   padding: 5%;
   box-sizing: border-box;
-  background-color: rgba(250,200,100,0.95);
+  background-color: rgba(200,64,0,0.98);
   height: 100%;
   color: #fff;
   font-size: 40px;
@@ -191,6 +202,13 @@ section .menu{
 }
 .end img{
   width: 500px;
+  margin-top: -100px;
+  margin-left: -50px;
+}
+.end .epoque{
+  font-family: "BorisBlackBloxx";
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(100,50,50,0.5);
 }
 
 .info{
@@ -198,8 +216,12 @@ section .menu{
   box-sizing: border-box;
   /*background-color: rgba(250,200,100,0.8);*/
   height: 90%;
+  width: 90%;
+  padding: 5%;
+  padding-bottom: 0;
+  padding-top: 2%;
   color: #fff;
-  font-size: 20px;
+  font-size: 24px;
   z-index: 30;
 }
 
@@ -214,6 +236,18 @@ section .menu{
   border-radius: 50px;
   padding: 10px;
 }
+/*
+.info .img{
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  z-index: 40;
+  color: #fff;
+  font-size: 60px;
+  background-color: rgb(150,60,60);
+  border-radius: 50px;
+  padding: 10px;
+}*/
 
 #foreground img{
   position: absolute;

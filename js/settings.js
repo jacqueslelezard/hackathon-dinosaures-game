@@ -36,6 +36,16 @@ settings.dinosaures= [
   name: "Stégosaure",
   //niveaux: [1,2,3 ] ,
 },
+{
+  id: "trice",
+  name: "Tricératops",
+  //niveaux: [1,2,3 ] ,
+},
+{
+  id: "coelo",
+  name: "Coelophysis",
+  //niveaux: [1,2,3 ] ,
+},
 ];
 
 settings.animations = {
@@ -101,11 +111,11 @@ settings.levels = [
 	},
 	{
 		id: 5,
-		name:"Bravo tu as traversé les ages",
+		name:"et tente d'échapper à l'apocalypse !!!",
 		background:"",
 		foreground:"",
-		dinosaures: [],
-		dinosauresMove: ['walk', 'stay'],
+		dinosaures: [0, 6, 1],
+		dinosauresMove: ['fly', 'sink', 'skink'],
 		winners: [1],
 		help: ".",
 		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",

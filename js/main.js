@@ -33,8 +33,8 @@ var Menu = {
     $("#container").css("background-image", "url('img/niveau" + (currentLevel + 1) + "bg.png')");
     $("body").attr("id", ("niveau"+(currentLevel+1)));
     $("#foreground img").attr("src", "img/niveau"+(currentLevel+1)+"fg.png");
-    $(".feedback").html("Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
-                        "<div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
+    $(".feedback").html("<span class='epoque'>Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
+                        "</span><div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
                         "<span class='check'>C'est parti !</span>");
     //gestion des feedback
     $(".feedback").on('click', function(){
@@ -55,8 +55,8 @@ var Scene = {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
       //changement de niveau
-      $('.end').html("Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !");
-      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+"LL.png'/><span class='check'>Continuer !</span></div>");
+      $('.end').html("<span class='epoque'>Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
+      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer !</span> <span class='check'><a href='http://htmlpreview.github.io/?https://github.com/vripoche/hackathon-dinosaures-game/blob/master/index.html'>Retour au livre !</span></div>");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);
