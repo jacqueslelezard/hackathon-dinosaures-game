@@ -97,6 +97,7 @@ var Transition = {
     var animation = settings.animations[type];
     var duration = 0;
     if(! animation) return;
+    this.reset;
     this.cb = cb;
     this.tl = new TimelineMax({repeat:0, onComplete:$.proxy(this.afterAnimate, this), delay:1});
     for(var step in animation) {
