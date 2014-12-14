@@ -16,8 +16,8 @@ var Menu = {
     }
     setTimeout(function(){
       $('.menu-dino').on('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
+        //e.preventDefault();
+        //e.stopPropagation();
         currentDino = $(this).data('index');
         indexDino = $(this).data('index-dino'); 
         $('.beast').html("<img src='img/"+$(this).attr('id')+"LL.png'/><img src='img/"+$(this).attr('id')+"LL2.png'/>");
@@ -27,8 +27,8 @@ var Menu = {
   select: function() {
     //sélection du dinosaure
     $("section .menu").click(function(){
-      e.preventDefault();
-      e.stopPropagation();
+      //e.preventDefault();
+      //e.stopPropagation();
       Scene.play();
       $("section .menu").slideUp(300);
     })
@@ -42,14 +42,14 @@ var Menu = {
                         "<span class='check'>C'est parti !</span>");
     //gestion des feedback
     $(".feedback").on('click', function(){
-      e.preventDefault();
-      e.stopPropagation();
+     // e.preventDefault();
+      //e.stopPropagation();
       $(".feedback").fadeOut(200);
       $(".menu").slideDown(300);
     });
     $(".end").on('click', function(){
-       e.preventDefault();
-       e.stopPropagation();
+       //e.preventDefault();
+       //e.stopPropagation();
       $(".end").fadeOut(200);
     });
   }
