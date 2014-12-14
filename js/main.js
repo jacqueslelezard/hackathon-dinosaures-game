@@ -15,7 +15,7 @@ var Menu = {
     setTimeout(function(){
       $('.menu-dino').on('click', function(){
         currentDino = $(this).data('index');
-        $('.beast').html("<img src='img/"+$(this).attr('id')+"LL.png'/>");
+        $('.beast').html("<img src='img/"+$(this).attr('id')+"LL.png'/><img src='img/"+$(this).attr('id')+"LL2.png'/>");
       });
     }, 0);
   },
@@ -80,13 +80,20 @@ var Scene = {
 var Transition = {
   tl: null,
   interval: null,
+  cb: function(){},
   animate: function (type, cb) {
     var animation = settings.animations[type];
     if(! animation) return;
-    this.tl = new TimelineMax({repeat:0, onComplete:cb, delay:1});
+    this.cb = cb;
+    this.tl = new TimelineMax({repeat:0, onComplete:$.proxy(this.afterAnimate, this), delay:1});
     for(var step in animation) {
       this.tl.add(new TweenMax(".beast", animation[step].duration || 1, $.extend(animation[step], {ease:animation[step].ease || Linear.easeNone})));
     }
+    this.startSprite();
+  },
+  afterAnimate: function() {
+    this.stopSprite();
+    this.cb();
   },
   reset: function() {
     this.tl.pause(0, true);
