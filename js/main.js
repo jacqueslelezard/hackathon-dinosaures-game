@@ -88,6 +88,7 @@ var Transition = {
   cb: function(){},
   animate: function (type, cb) {
     var animation = settings.animations[type];
+    var duration = 0;
     if(! animation) return;
     this.cb = cb;
     this.tl = new TimelineMax({repeat:0, onComplete:$.proxy(this.afterAnimate, this), delay:1});
@@ -112,6 +113,11 @@ var Transition = {
   },
   stopSprite: function() {
     clearInterval(this.interval);
+  },
+  armageddon: function() {
+    $(".stone").animate({top:0}, 100, 'linear', function() {
+      $('.stone').box2d({'y-velocity':150});
+    });
   }
 }
 
