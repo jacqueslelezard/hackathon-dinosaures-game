@@ -101,9 +101,9 @@ var Transition = {
   },
   startSprite: function() {
     this.interval = setInterval(function() {
-      var item =  $(".beast img").index(0);
+      var item =  $(".beast img:eq(0)");
       item.css('display', item.css('display') === 'none' ? 'block' : 'none');
-    }, 500);
+    }, 300);
   },
   stopSprite: function() {
     clearInterval(this.interval);
