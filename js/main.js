@@ -28,6 +28,7 @@ var Menu = {
 
     //assigne le background correspondant au niveau
     $("#container").css("background-image", "url('img/niveau" + (currentLevel + 1) + "bg.png')");
+    $("body").attr("id", ("niveau"+(currentLevel+1)));
     $("#foreground img").attr("src", "img/niveau"+(currentLevel+1)+"fg.png");
     $(".feedback").html("Epoque " + (currentLevel + 1) + " : le "+settings.levels[currentLevel].name+
                         "<div class='help'>Choisis ta monture "+settings.levels[currentLevel].help+"</div>"+
