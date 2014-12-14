@@ -174,8 +174,9 @@ section .menu{
   left: 40%;
   z-index: 40;
   color: #fff;
-  background-color: rgb(150,60,60);
-  border-radius: 50px;
+  color: rgb(150,60,60);
+  background-color: #fff;
+  box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
 }
 
@@ -232,8 +233,21 @@ section .menu{
   z-index: 40;
   color: #fff;
   font-size: 60px;
-  background-color: rgb(150,60,60);
-  border-radius: 50px;
+  color: rgb(150,60,60);
+  background-color: #fff;
+  box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
+  padding: 10px;
+}
+.info .retour{
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  z-index: 40;
+  color: #fff;
+  font-size: 60px;
+  color: rgb(150,60,60);
+  background-color: #fff;
+  box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
 }
 /*

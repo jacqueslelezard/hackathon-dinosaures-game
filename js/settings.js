@@ -23,7 +23,7 @@ settings.dinosaures= [
 },
 {
   id: "liopleu",
-  name: "Liopleusaure",
+  name: "Liopleurodon",
   //niveaux: [1,2,3 ] ,
 },
 {

@@ -56,7 +56,7 @@ var Scene = {
     if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
       //changement de niveau
       $('.end').html("<span class='epoque'>Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
-      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer !</span> <span class='check'><a href='http://htmlpreview.github.io/?https://github.com/vripoche/hackathon-dinosaures-game/blob/master/index.html'>Retour au livre !</span></div>");
+      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer !</span> <span class='retour'><a href='http://htmlpreview.github.io/?https://github.com/vripoche/hackathon-dinosaures-game/blob/master/index.html'>Retour au livre !</span></div>");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);
