@@ -161,6 +161,7 @@ section .menu{
   font-size: 24px;
   box-shadow: 2px 2px 5px rgba(100,100,100,0.8);
   font-family: "BorisBlackBloxx";
+  text-align: center;
 }
 
 .menu-dino img{
@@ -188,6 +189,7 @@ section .menu{
   font-family: "BorisBlackBloxx";
   color: #fff;
   text-shadow: 2px 2px 5px rgba(100,50,50,0.5);
+  font-size: 54px;
 }
 
 .feedback .check{
@@ -256,7 +258,7 @@ section .menu{
 .info .check{
   position: absolute;
   bottom: 35%;
-  left: 50%;
+  left: 55%;
   z-index: 40;
   color: #fff;
   font-size: 60px;
@@ -272,7 +274,7 @@ section .menu{
 .info .retour{
   position: absolute;
   bottom: 20%;
-  left: 50%;
+  left: 55%;
   z-index: 40;
   color: #fff;
   font-size: 60px;
