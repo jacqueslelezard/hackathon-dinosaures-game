@@ -8,6 +8,7 @@ var Menu = {
   },
   display: function () {
     var index = 0;
+
     for(var dino in settings.levels[currentLevel].dinosaures){
       index = settings.levels[currentLevel].dinosaures[dino];
       $('section .menu').append('<div class="menu-dino" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name + '</div>');
@@ -50,7 +51,7 @@ var Scene = {
   },
   end: function() {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
-    if($.inArray(indexDino, settings.levels[currentLevel].winners)) {
+    if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
       //changement de niveau
       $('.end').html("Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !");
       $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+"LL.png'/><span class='check'>Continuer !</span></div>");
@@ -101,6 +102,7 @@ var Transition = {
     this.tl.pause(0, true);
   },
   startSprite: function() {
+    if(this.interval) clearInterval(this.interval);
     this.interval = setInterval(function() {
       var item =  $(".beast img:eq(0)");
       item.css('display', item.css('display') === 'none' ? 'block' : 'none');
