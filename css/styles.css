@@ -11,7 +11,7 @@ font-weight: normal;
 }
 @font-face {
 font-family: 'BorisBlackBloxx';
-src: url('font/BorisBlackBloxx.otf');
+src: url('font/BorisBlackBloxx.ttf');
 }
 
 html, body, div, span, applet, object, iframe,
