@@ -58,7 +58,6 @@ settings.levels = [
 		infoimg: "ichtyo"
 		//help: "L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années."
 	},
-
 	{
 		id: 2,
 		name:"Jurassique",
@@ -73,22 +72,38 @@ settings.levels = [
 	},
 	{
 		id: 3,
+		name:"Jurassique coté l'océan",
+		background:"",
+		foreground:"",
+		dinosaures: [0, 2, 4],
+		dinosauresMove: ['walk', 'sink', 'swim'],
+		winners: [0, 2, 4],
+		help: "et tente de traverser la forêt du Jurassique.",
+		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		infoimg: "diplo"
+	},
+	{
+		id: 4,
 		name:"Crétacé Inférieur",
 		background:"",
 		foreground:"",
 		dinosaures: [1, 5, 1],
 		dinosauresMove: ['fly', 'fly'],
 		winners: [1, 5, 1],
-		help: "et tente de traverser les plaines du Crétacé."
+		help: "et tente de traverser les plaines du Crétacé.",
+		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		infoimg: "diplo"
 	},
 	{
-		id: 4,
+		id: 5,
 		name:"Crétacé Supérieur",
 		background:"",
 		foreground:"",
 		dinosaures: [1, 2, 5],
 		dinosauresMove: ['fly', 'fly'],
 		winners: [2],
-		help: "et tente d'atteindre les hautes falaises."
+		help: "et tente d'atteindre les hautes falaises.",
+		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		infoimg: "diplo"
 	}
 ];
