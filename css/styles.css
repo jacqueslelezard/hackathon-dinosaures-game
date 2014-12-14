@@ -167,6 +167,9 @@ section .menu{
   position: relative;
   margin-top: -100px;
 }
+.menu-dino img:hover{
+  opacity: 0.8;
+}
 
 .feedback{
   position: absolute;
@@ -198,6 +201,10 @@ section .menu{
   box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
   font-family: "BorisBlackBloxx";
+}
+
+.feedback .check:hover{
+  opacity: 0.8;
 }
 
 .feedback .help{
@@ -259,6 +266,9 @@ section .menu{
   padding: 10px;
   font-family: "BorisBlackBloxx";
 }
+.info .check:hover{
+  opacity: 0.8;
+}
 .info .retour{
   position: absolute;
   bottom: 20%;
@@ -271,6 +281,9 @@ section .menu{
   box-shadow: 2px 2px 3px rgba(100,60,60,0.8);
   padding: 10px;
   font-family: "BorisBlackBloxx";
+}
+.info .retour:hover{
+  opacity: 0.8;
 }
 /*
 .info .img{

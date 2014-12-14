@@ -112,7 +112,7 @@ settings.levels = [
 		winners: [1, 7],
 		help: "et tente de traverser les plaines du Crétacé.",
 		info: "Le tricétatops est facilement reconnaissable avec son gros crâne, ses trois cornes et sa collerette ! Certains spécimens étaient recouverts de poils. <br/>Il mesurait 9 mètres de long et 3 mètres de haut.<br/><br/>Le tranquille tricératops se nourrissait d’herbes et de plantes. Il vivait à la même époque du terrible tyrannosaure et constituait une proie facile.<br/>Le tricératops a vécu de 68 à 65 millions d’années avant notre ère.",
-		infoimg: "velo"
+		infoimg: "trice"
 	},
 	{
 		id: 5,
