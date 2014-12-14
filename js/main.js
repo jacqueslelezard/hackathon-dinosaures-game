@@ -119,7 +119,7 @@ var Transition = {
     clearInterval(this.interval);
   },
   armageddon: function() {
-    $(".stone").animate({top:-200}, 100, 'linear', function() {
+    $(".stone").animate({top:-100}, 100, 'linear', function() {
       $('.stone').box2d({'y-velocity':100});
     });
   }
