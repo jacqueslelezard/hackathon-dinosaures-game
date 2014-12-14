@@ -46,6 +46,11 @@ settings.dinosaures= [
   name: "Coelophysis",
   //niveaux: [1,2,3 ] ,
 },
+{
+  id: "plio",
+  name: "Pliosaure",
+  //niveaux: [1,2,3 ] ,
+},
 ];
 
 settings.animations = {
@@ -65,8 +70,8 @@ settings.levels = [
 		name:"Trias",
 		background:"",
 		foreground:"",
-		dinosaures: [0, 5],
-		dinosauresMove: ['stay', 'swim'],
+		dinosaures: [0, 5, 8],
+		dinosauresMove: ['fly', 'swim', 'sink'],
 		winners: [0, 5],
 		help: "et tente d'arriver sur l'autre rive de la mer du Trias.",
 		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
@@ -82,7 +87,7 @@ settings.levels = [
 		dinosauresMove: ['walk', 'walk', 'walk', 'stay'],
 		winners: [2, 3, 6],
 		help: "et tente de traverser la forêt du Jurassique.",
-		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		info: "Le stégosaure fait peur avec ses grosses piques sur le dos. Et pourtant ! Il était un animal bien tranquille, incapable de courir, qui passait ses journées à manger des herbes au ras du sol ; difficile de déplacer ses trois tonnes. <br/> Il mesurait 4 mètres de haut et huit mètres de long.<br/><br/>Les piques du stégosaure changeaient peut-être de couleur afin d’impressionner ses ennemis !",
 		infoimg: "stego"
 	},
 	{
@@ -90,33 +95,33 @@ settings.levels = [
 		name:"Jurassique coté océan",
 		background:"",
 		foreground:"",
-		dinosaures: [0, 2, 4],
-		dinosauresMove: ['walk', 'sink', 'swim'],
-		winners: [4],
+		dinosaures: [9, 2, 4],
+		dinosauresMove: ['swim', 'sink', 'swim'],
+		winners: [4, 9],
 		help: "et tente de traverser les mers du Jurassique.",
-		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
-		infoimg: "liopleu"
+		info: "Le pliosaure était le plus grand prédateur des mers !! Il mangeait des calamars, des poissons et des reptiles marins. <br/>Il mesurait de 10 à 13 mètres de long et pesait plusieurs tonnes<br/><br/>Le pliosaure a vécu de 112 à 98 millions d’années avant notre ère.",
+		infoimg: "plio"
 	},
 	{
 		id: 4,
 		name:"Crétacé",
 		background:"",
 		foreground:"",
-		dinosaures: [1, 4],
-		dinosauresMove: ['walk', 'stay'],
-		winners: [1],
+		dinosaures: [1, 4, 7],
+		dinosauresMove: ['walk', 'stay', "walk"],
+		winners: [1, 7],
 		help: "et tente de traverser les plaines du Crétacé.",
-		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
+		info: "Le tricétatops est facilement reconnaissable avec son gros crâne, ses trois cornes et sa collerette ! Certains spécimens étaient recouverts de poils. <br/>Il mesurait 9 mètres de long et 3 mètres de haut.<br/><br/>Le tranquille tricératops se nourrissait d’herbes et de plantes. Il vivait à la même époque du terrible tyrannosaure et constituait une proie facile.<br/>Le tricératops a vécu de 68 à 65 millions d’années avant notre ère.",
 		infoimg: "velo"
 	},
 	{
 		id: 5,
-		name:"et tente d'échapper à l'apocalypse !!!",
+		name:" dernier dinosaure...",
 		background:"",
 		foreground:"",
 		dinosaures: [0, 6, 1],
-		dinosauresMove: ['fly', 'sink', 'skink'],
-		winners: [1],
+		dinosauresMove: ['stop', 'stop', 'stop'],
+		winners: [0,6,1],
 		help: ".",
 		info: "<br/>L’ichtyosaure ressemblait aux dauphins de maintenant. Comme eaux, ils nageaient très vite, devaient respirer de l’air à la surface de la mer, mangeaient des poissons et vivipares. Ils mesuraient entre un et dix mètres de longueur (environ un bus)<br/><br/> L’ichtyosaure n’est pas un dinosaure, il est apparu 20 millions d’années avant !!<br/><br/>L’ichtyosaure est apparu il y a 250 millions d’années et a disparu il y a 90 millions d’années.",
 		infoimg: "velo"

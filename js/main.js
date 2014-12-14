@@ -12,7 +12,7 @@ var Menu = {
 
     for(var dino in settings.levels[currentLevel].dinosaures){
       index = settings.levels[currentLevel].dinosaures[dino];
-      $('section .menu').append('<div class="menu-dino" data-index-dino="' + dino + '" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name + '</div>');
+      $('section .menu').append('<div class="menu-dino" data-index-dino="' + dino + '" id="' + settings.dinosaures[index].id + '" data-index=' + dino + '>' + settings.dinosaures[index].name +'<img src="img/'+settings.dinosaures[index].id+'menu.png "/></div>');
     }
     setTimeout(function(){
       $('.menu-dino').on('click', function(){
@@ -54,9 +54,16 @@ var Scene = {
   end: function() {
     var indexDino = settings.levels[currentLevel].dinosaures[currentDino];
     if($.inArray(indexDino, settings.levels[currentLevel].winners) !== -1) {
+      if(currentLevel === 4) {
+        Transition.armageddon();
+        setTimeout(function(){
+            $('#fin').fadeIn(300);
+        }, 3000);
+        return;
+      }
       //changement de niveau
       $('.end').html("<span class='epoque'>Bien joué tu a traversé l'ère du "+settings.levels[currentLevel].name+" !</span>");
-      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer !</span> <span class='retour'><a href='http://htmlpreview.github.io/?https://github.com/vripoche/hackathon-dinosaures-game/blob/master/index.html'>Retour au livre !</span></div>");
+      $('.end').append("<div class='info'>"+settings.levels[currentLevel].info+"<br/><img src='img/"+settings.levels[currentLevel].infoimg+".png'/><span class='check'>Continuer</span> <span class='retour'><a href='https://r21ea13788.racontr.com/'>Livre</span></div>");
       currentLevel=currentLevel+1;
       $('.feedback').fadeIn(300);
       $('.end').fadeIn(300);
@@ -115,8 +122,8 @@ var Transition = {
     clearInterval(this.interval);
   },
   armageddon: function() {
-    $(".stone").animate({top:0}, 100, 'linear', function() {
-      $('.stone').box2d({'y-velocity':150});
+    $(".stone").animate({top:-100}, 100, 'linear', function() {
+      $('.stone').box2d({'y-velocity':100});
     });
   }
 }
@@ -125,4 +132,5 @@ $(function(){
   Menu.init();
   $(".menu").hide();
   $(".end").hide();
+  $("#fin").hide();
 });
