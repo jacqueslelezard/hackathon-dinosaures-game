@@ -35,7 +35,7 @@ settings.animations = {
   stop:[{duration:1, x:300}],
   stopFly:[{duration:1, bezier:{type:'soft', values:[{x:200, y:-400}, {x:300, y:-300}]}}],
   swim:[{x:100, y:50}, {x:600}, {x:724, y:0}],
-  stay:[{duration: .5, y:-50}, {duration: .5, y:0}, {duration: .5, y:-100}, {duration: .5, y:0}],
+  stay:[{duration:2, bezier:{type:'soft', values:[{x:300, y:200}, {x:724, y:0}]}}],
   sink:this.fly
 };
 
